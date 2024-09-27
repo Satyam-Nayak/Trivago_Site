@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trivago.in - Compare hotel prices worldwide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAC20lEQVRIic2WXUhTYRjH/+87t7PjZkvcEDNxlqCoiQgOtCAjCPogIrwOQoyQCIquIki7CfsQ7Cr7uOjKbqybJIIMu9AuI4OkTAuzCbp0Od12vt63i03b3Lvjpgz8c64Oz/P/nec87/OcQzjnyKVoTt13BkCb8ecQsNjzyF9+PCeA6KeJ2eqzq3df0OI9ZgYzH/HySnYArumB6/fnGy6AMeKW06YG5/D8PAYaEZw0AeSl3lrs6Q/3vqbVHgAQHmI1guEejHdDroRcBSowMQMQm5UUSWkzRp9grANWLxx1AMA0E3cxIK0+D2G4E1yHXAuQDJMyAMh2BCYw2IGVL7CVgCS3javQQibZm80BISAEAz6ofyCVJrlzA9FpuOpwut/EIIMKCIFUBtWSYM2hzUMqxZk3qDxknp1ND2LSg2ARtD5EY1sm4dkAjDCUafj6cPjSxk5sF8AUhKdRdQ3HbkB2ZfFMQgCLKMy/QPzxGebQsbsBbW/hrsjKOiYi+OAYBjQNZO2kMw7ZvgXrmAQVLClYjlISB3BK6N40C2l2STUYj8cBu2RLYf5GQwHgwch819gS8tbaGDb4nVohoOz2JPJpfKp1drO5sOtkyYYYwWGoKZYgUchrl9My8nU5Nez9txCcFsiWeJhEa4oFG0wA8Hkd0BMaY6NHBueCYT0x5m/EaB30w5aQrnOf15HqJnhF5UVSvds2vqKDEgAgACWF974/Puo+uM8BYHRqteNdADb6f+MxXltk9boFFYhOEfBhaqXl2S84EtcDoHMYHAAsBHkkaZ+uGqPnyloqnalW4oFs3u/sPFAAlSU8CWAlsFPYKazJ7iq7WOcUuqetIKZTT38O/Y5CMt0KCjtRKg21p51Bs+RX7d5bTS6EjKSer0vnCBndTS4Td5hXENPMotI7stA3HgIQH2/OwXG5vuBqq6fc5OOaIWBdPwLKQkgD4HFaKzyb+G4FsDXtgH/Tbeof8Iry7OJWi5sAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="114" height="32" viewBox="0 0 114 32"
+            data-testid="header-hero-logo" class="">
+            <g clip-path="url(#Logo_default_svg__a)">
+                <path fill="#E32851"
+                    d="M38.637 7.434h-4.913a.255.255 0 00-.255.255v15.907c0 .14.114.255.255.255h4.913c.14 0 .255-.114.255-.255V7.689a.255.255 0 00-.255-.255z">
+                </path>
+                <path fill="#FF932C"
+                    d="M52.833 7.6L49.6 16.21a.057.057 0 01-.107 0L46.231 7.6a.255.255 0 00-.239-.165h-5.37a.255.255 0 00-.237.351l6.46 15.907c.039.096.133.16.236.16h4.724a.255.255 0 00.237-.16L58.53 7.786a.255.255 0 00-.237-.352h-5.222a.255.255 0 00-.239.166z">
+                </path>
+                <path fill="#0088D9"
+                    d="M104.344 7.185c-5.126 0-8.86 3.615-8.86 8.476 0 4.86 3.734 8.475 8.86 8.475 5.068 0 8.861-3.645 8.861-8.475 0-4.86-3.764-8.476-8.861-8.476zm0 12.328c-2.015 0-3.348-1.541-3.348-3.853 0-2.31 1.333-3.852 3.348-3.852 1.986 0 3.349 1.54 3.349 3.853 0 2.281-1.363 3.852-3.349 3.852z">
+                </path>
+                <path fill="#E32851"
+                    d="M31.673 7.355a2.833 2.833 0 00-.514-.121c-.314-.05-3.647-.424-5.501 2.063-.033.044-.103.02-.103-.034V7.689a.255.255 0 00-.255-.255h-4.913a.255.255 0 00-.255.255v15.907c0 .14.114.255.255.255H25.3a.255.255 0 00.255-.255V17.69c0-4.416 2.044-5.514 4.06-5.514.237 0 .926-.001 1.9.268a.255.255 0 00.322-.245V7.594a.253.253 0 00-.164-.239zM36.18 0c-1.713 0-3.102 1.339-3.102 2.99 0 1.651 1.39 2.99 3.103 2.99 1.713 0 3.102-1.339 3.102-2.99 0-1.651-1.39-2.99-3.102-2.99z">
+                </path>
+                <path fill="#FF932C"
+                    d="M75.341 7.434H70.43a.255.255 0 00-.255.255v1.565c0 .06-.083.08-.109.024-1.774-3.717-12.282-2.994-12.282 6.364 0 8.748 8.978 10.306 12.29 6.645.036-.04.1-.015.1.038v1.27c0 .142.115.256.256.256h4.912a.255.255 0 00.256-.255V7.689a.255.255 0 00-.255-.255zM66.77 19.495c-2.164 0-3.672-1.508-3.672-3.836s1.508-3.869 3.672-3.869c2.197 0 3.672 1.574 3.672 3.87 0 2.294-1.475 3.835-3.672 3.835z">
+                </path>
+                <path fill="#0088D9"
+                    d="M93.893 7.434h-4.912a.255.255 0 00-.255.255v1.564c0 .062-.083.08-.11.025-1.78-3.764-11.567-2.82-11.567 5.89 0 8.54 8.92 9.243 11.58 6.759a.057.057 0 01.096.042v.769c-.068 3.629-4.614 5.2-6.924 2.443a.255.255 0 00-.334-.05l-4.14 2.677a.257.257 0 00-.066.368c5.283 7.219 16.802 3.548 16.887-5.422V7.69a.255.255 0 00-.255-.255zm-8.101 11.201c-1.956 0-3.32-1.363-3.32-3.466 0-2.104 1.364-3.497 3.32-3.497 1.985 0 3.318 1.422 3.318 3.497 0 2.074-1.333 3.466-3.318 3.466z">
+                </path>
+                <path fill="#E32851"
+                    d="M18.424 14.867h-4.92a.26.26 0 00-.254.237 3.92 3.92 0 01-3.907 3.61c-2.472 0-3.472-2.1-3.472-2.1a3.923 3.923 0 01-.448-1.749c0-.02.011-.04.03-.05l1.407-.777 8.894-4.919a.425.425 0 00.22-.372V3.46a.255.255 0 00-.38-.224L5.509 8.814a.057.057 0 01-.086-.05V.452a.255.255 0 00-.394-.214L.194 3.368A.425.425 0 000 3.727v11.14a9.343 9.343 0 0018.68.268.257.257 0 00-.256-.268z">
+                </path>
+            </g>
+            <defs>
+                <clipPath id="Logo_default_svg__a">
+                    <path fill="#fff" d="M0 0h113.205v32H0z"></path>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#"><i class="fa-regular fa-heart"></i> Favorites</a></li>
+                <li><a href="#"><i class="fa-solid fa-globe"></i> EN · ₹</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Log In</a></li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-linecap="round"></path>
+                        </svg>
+                        Menu
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- =================  section footer ===================== -->
+    <div class="secondpart">
+        <section class="container">
+            <div class="header-text">
+                <h1>We compare hotel prices from 100s of sites</h1>
+                <p>We’ll do the searching. You do the saving.</p>
+            </div>
+            <br><br>
+            <div class="searchbox">
+                <div class="input-group">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="Icon_icon__1R9KC">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                                stroke-width="2">
+                                <path d="M10 3a7 7 0 107 7 7 7 0 00-7-7zM21 21l-6-6" vector-effect="non-scaling-stroke">
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="Where to?">
+                </div>
+                <div class="input-group">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="Icon_icon__1R9KC">
+                            <g fill="currentColor">
+                                <path
+                                    d="M19 5h-1a1 1 0 00-2 0H8a1 1 0 00-2 0H5a2 2 0 00-2 2v11a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2zm1 13a1 1 0 01-1 1H5a1 1 0 01-1-1V9h16zm0-10H4V7a1 1 0 011-1h14a1 1 0 011 1z">
+                                </path>
+                                <circle cx="7.5" cy="12.5" r="1.5"></circle>
+                            </g>
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="Check in -- / -- / ----">
+                </div>
+                <div class="input-group">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="Icon_icon__1R9KC">
+                            <g fill="currentColor">
+                                <path
+                                    d="M19 5h-1a1 1 0 00-2 0H8a1 1 0 00-2 0H5a2 2 0 00-2 2v11a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2zm1 13a1 1 0 01-1 1H5a1 1 0 01-1-1V9h16zm0-10H4V7a1 1 0 011-1h14a1 1 0 011 1z">
+                                </path>
+                                <circle cx="7.5" cy="12.5" r="1.5"></circle>
+                            </g>
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="Check out -- / -- / ----">
+                </div>
+                <div class="input-group">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="Icon_icon__1R9KC">
+                            <g fill="currentColor">
+                                <path
+                                    d="M13.13 12.14a4.5 4.5 0 10-7.26 0A5 5 0 002 17a3 3 0 003 3h9a3 3 0 003-3 5 5 0 00-3.87-4.86zM9.5 6a3.49 3.49 0 012.44 6A3.5 3.5 0 016 9.5 3.5 3.5 0 019.5 6zM14 19H5a2 2 0 01-2-2 4 4 0 013.74-4 4.41 4.41 0 005.52 0A4 4 0 0116 17a2 2 0 01-2 2z">
+                                </path>
+                                <path
+                                    d="M19.31 10.24A3.93 3.93 0 0020 8a4 4 0 00-6.94-2.69 5.87 5.87 0 01.7.71A3 3 0 1116 11a2.91 2.91 0 01-1.15-.23v.11a4.5 4.5 0 01-.28.83A4 4 0 0016 12a3.94 3.94 0 002.55-.94A3 3 0 0121 14a1 1 0 01-1 1h-2.35a6.67 6.67 0 01.26 1H20a2 2 0 002-2 4 4 0 00-2.69-3.76z">
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="2 Guests, 1 Room">
+                </div>
+                <button type="submit">Search</button>
+            </div>
+
+        </section>
+        <section class="imgessec">
+            <div class="logoimgs">
+                <img width="40" height="16"
+                    src="https://imgcy.trivago.com/image/upload/hardcodedimages/mpm-localised-logos-dark/395.png"
+                    alt="logo">
+                <img width="60" height="16"
+                    src="https://imgcy.trivago.com/image/upload/hardcodedimages/mpm-localised-logos-dark/3340.png"
+                    alt="logo">
+                <img width="100" height="16"
+                    src="https://imgcy.trivago.com/image/upload/hardcodedimages/mpm-localised-logos-dark/626.png"
+                    alt="logo">
+                <img width="60" height="16"
+                    src="https://imgcy.trivago.com/image/upload/hardcodedimages/mpm-localised-logos-dark/2192.png"
+                    alt="logo">
+                <img width="60" height="16"
+                    src="https://imgcy.trivago.com/image/upload/hardcodedimages/mpm-localised-logos-dark/14.png"
+                    alt="logo">
+                <img width="60" height="16"
+                    src="https://imgcy.trivago.com/image/upload/hardcodedimages/mpm-localised-logos-dark/634.png"
+                    alt="logo">
+                <img width="50" height="16"
+                    src="https://imgcy.trivago.com/image/upload/hardcodedimages/mpm-localised-logos-dark/2452.png"
+                    alt="logo">
+            </div>
+        </section>
+    </div>
+    <br>
+    <div class="thirdbackimg">
+        <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_380,q_45,w_980/categoryimages/64/98/64981_v33.jpeg"
+            alt="">
+        <h1>Discover the best time to book your next stay</h1>
+    </div>
+    <!-- fourth section -->
+<!-- <section class="fourthsection1">
+    <div class="fourthsection">
+        <h1>Take a dip at these top-rated hotels</h1>
+        <br>
+        <h4>Spain Italy Turkey</h4>
+    </div>
+    <br><br>
+    <div class="destinations">
+        <div class="dess">
+            <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_40,w_400/hotelier-images/9f/65/73c4575a6befd2110af7b1478e1e73894b69e378ff51c95adf587bf8c53e.jpeg" alt="">
+            <div class="desstext">
+                <h2>Hotel Isabel</h2>
+            <p>8.8 - Excllent (3851) Torremolinos</p>
+            <br>
+            <a href=""> <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M21.5 21h-1L15 12.75l4.55-3.05a1 1 0 00.28-1.39 7 7 0 00-8-2.74 6.69 6.69 0 00-1.64.79h-.08a7.12 7.12 0 00-1.38 1.26 7 7 0 00-.54 8.47 1 1 0 001.39.28l4.57-3.06L19.29 21H2.5a.5.5 0 000 1h19a.5.5 0 000-1zM19 8.87l-2.65 1.76a6.26 6.26 0 00-.68-1.34 6.46 6.46 0 00-3.81-2.69A6 6 0 0119 8.87zM9 15.53a6 6 0 01.64-7.46 6.49 6.49 0 001 4.55 6.84 6.84 0 001 1.15zm3.5-2.34a5.23 5.23 0 01-1-1.13 5.51 5.51 0 01-.69-4.63 5.42 5.42 0 014.67 3.78zM4.5 4A1.5 1.5 0 113 5.5 1.5 1.5 0 014.5 4m0-1A2.5 2.5 0 107 5.5 2.5 2.5 0 004.5 3z"></path></g></svg></span>Direct beach access <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M15 14a2 2 0 00-2 2 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 1 1 0 012 0 .5.5 0 001 0 2 2 0 00-2-2zM10.5 18.5a.5.5 0 00-.5.5 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 .5.5 0 00-.5-.5zM13.5 18.5a.5.5 0 01.5.5 1 1 0 002 0 2 2 0 014 0 .5.5 0 01-1 0 1 1 0 00-2 0 2 2 0 01-4 0 .5.5 0 01.5-.5zM16.5 2A1.5 1.5 0 0015 3.5V7H8V3.5a.5.5 0 011 0v1a.5.5 0 001 0v-1a1.5 1.5 0 00-3 0v9a.5.5 0 001 0V11h7v1.5a.5.5 0 001 0v-9a.5.5 0 011 0v1a.5.5 0 001 0v-1A1.5 1.5 0 0016.5 2zM8 10V8h7v2z"></path></g></svg></span>Pool</a>
+            </div>
+            <br>
+            <div class="dessbut1">
+                <button class="dessbut" type="button">Check price</button>
+            </div>
+        <br>
+        </div>
+        
+        <div class="dess">
+            <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_40,w_400/partner-images/70/b8/9c93b7b3dd75156391cd877db98e1e4975cb97325061c16cb8c9c5366f73.jpeg" alt="">
+            <div class="desstext">
+                <h2>Hotel Botanico y Oriental Spa </h2>
+                <p>8.8 - Excllent (3851) Torremolinos</p>
+                <br>
+                <a href=""> <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M21.5 21h-1L15 12.75l4.55-3.05a1 1 0 00.28-1.39 7 7 0 00-8-2.74 6.69 6.69 0 00-1.64.79h-.08a7.12 7.12 0 00-1.38 1.26 7 7 0 00-.54 8.47 1 1 0 001.39.28l4.57-3.06L19.29 21H2.5a.5.5 0 000 1h19a.5.5 0 000-1zM19 8.87l-2.65 1.76a6.26 6.26 0 00-.68-1.34 6.46 6.46 0 00-3.81-2.69A6 6 0 0119 8.87zM9 15.53a6 6 0 01.64-7.46 6.49 6.49 0 001 4.55 6.84 6.84 0 001 1.15zm3.5-2.34a5.23 5.23 0 01-1-1.13 5.51 5.51 0 01-.69-4.63 5.42 5.42 0 014.67 3.78zM4.5 4A1.5 1.5 0 113 5.5 1.5 1.5 0 014.5 4m0-1A2.5 2.5 0 107 5.5 2.5 2.5 0 004.5 3z"></path></g></svg></span>Direct beach access <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M15 14a2 2 0 00-2 2 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 1 1 0 012 0 .5.5 0 001 0 2 2 0 00-2-2zM10.5 18.5a.5.5 0 00-.5.5 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 .5.5 0 00-.5-.5zM13.5 18.5a.5.5 0 01.5.5 1 1 0 002 0 2 2 0 014 0 .5.5 0 01-1 0 1 1 0 00-2 0 2 2 0 01-4 0 .5.5 0 01.5-.5zM16.5 2A1.5 1.5 0 0015 3.5V7H8V3.5a.5.5 0 011 0v1a.5.5 0 001 0v-1a1.5 1.5 0 00-3 0v9a.5.5 0 001 0V11h7v1.5a.5.5 0 001 0v-9a.5.5 0 011 0v1a.5.5 0 001 0v-1A1.5 1.5 0 0016.5 2zM8 10V8h7v2z"></path></g></svg></span>Pool</a>
+                </div>
+                <br>
+                <div class="dessbut1">
+                    <button class="dessbut" type="button">Check price</button>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="dess">
+            <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_40,w_400/hotelier-images/6e/6e/8ea7cb137f57db573eb691a6ba5d82b98e82d88b580898b37c34657bd2e7.jpeg" alt="">
+            <div class="desstext">
+                <h2>Gran Hotel Miramar GL</h2>
+                <p>8.8 - Excllent (3851) Torremolinos</p>
+                <br>
+                <a href=""> <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M21.5 21h-1L15 12.75l4.55-3.05a1 1 0 00.28-1.39 7 7 0 00-8-2.74 6.69 6.69 0 00-1.64.79h-.08a7.12 7.12 0 00-1.38 1.26 7 7 0 00-.54 8.47 1 1 0 001.39.28l4.57-3.06L19.29 21H2.5a.5.5 0 000 1h19a.5.5 0 000-1zM19 8.87l-2.65 1.76a6.26 6.26 0 00-.68-1.34 6.46 6.46 0 00-3.81-2.69A6 6 0 0119 8.87zM9 15.53a6 6 0 01.64-7.46 6.49 6.49 0 001 4.55 6.84 6.84 0 001 1.15zm3.5-2.34a5.23 5.23 0 01-1-1.13 5.51 5.51 0 01-.69-4.63 5.42 5.42 0 014.67 3.78zM4.5 4A1.5 1.5 0 113 5.5 1.5 1.5 0 014.5 4m0-1A2.5 2.5 0 107 5.5 2.5 2.5 0 004.5 3z"></path></g></svg></span>Direct beach access <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M15 14a2 2 0 00-2 2 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 1 1 0 012 0 .5.5 0 001 0 2 2 0 00-2-2zM10.5 18.5a.5.5 0 00-.5.5 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 .5.5 0 00-.5-.5zM13.5 18.5a.5.5 0 01.5.5 1 1 0 002 0 2 2 0 014 0 .5.5 0 01-1 0 1 1 0 00-2 0 2 2 0 01-4 0 .5.5 0 01.5-.5zM16.5 2A1.5 1.5 0 0015 3.5V7H8V3.5a.5.5 0 011 0v1a.5.5 0 001 0v-1a1.5 1.5 0 00-3 0v9a.5.5 0 001 0V11h7v1.5a.5.5 0 001 0v-9a.5.5 0 011 0v1a.5.5 0 001 0v-1A1.5 1.5 0 0016.5 2zM8 10V8h7v2z"></path></g></svg></span>Pool</a>
+                </div>
+                <br>
+                <div class="dessbut1">
+                    <button class="dessbut" type="button">Check price</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="fourthsection1">
+    <div class="fourthsection">
+        <h1>Take a dip at these top-rated hotels</h1>
+        <br>
+        <h4>Spain Italy Turkey</h4>
+    </div>
+    <br><br>
+    <div class="destinations">
+        <div class="dess">
+            <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_40,w_400/hotelier-images/9f/65/73c4575a6befd2110af7b1478e1e73894b69e378ff51c95adf587bf8c53e.jpeg" alt="">
+            <div class="desstext">
+                <h2>Hotel Isabel</h2>
+                <p>8.8 - Excellent (3851) Torremolinos</p>
+                <br>
+                <a href="#">
+                    <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M15 14a2 2 0 00-2 2 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 1 1 0 012 0 .5.5 0 001 0 2 2 0 00-2-2zM10.5 18.5a.5.5 0 00-.5.5 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 .5.5 0 00-.5-.5zM13.5 18.5a.5.5 0 01.5.5 1 1 0 002 0 2 2 0 014 0 .5.5 0 01-1 0 1 1 0 00-2 0 2 2 0 01-4 0 .5.5 0 01.5-.5zM16.5 2A1.5 1.5 0 0015 3.5V7H8V3.5a.5.5 0 011 0v1a.5.5 0 001 0v-1a1.5 1.5 0 00-3 0v9a.5.5 0 001 0V11h7v1.5a.5.5 0 001 0v-9a.5.5 0 011 0v1a.5.5 0 001 0v-1A1.5 1.5 0 0016.5 2zM8 10V8h7v2z"></path></g></svg></span>Direct beach access 
+                    <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M12 6.6c1.43 1.87 3 4.33 3 5.4a3 3 0 01-6 0c0-1.07 1.57-3.53 3-5.4M12 5s-4 4.79-4 7a4 4 0 008 0c0-2.21-4-7-4-7z"></path><path d="M17 12.53a5.23 5.23 0 01-.21 1C19.43 14.12 21 15.18 21 16c0 1.22-3.51 3-9 3s-9-1.78-9-3c0-.82 1.57-1.88 4.26-2.5a5.23 5.23 0 01-.21-1c-3 .69-5 2-5 3.47 0 2.21 4.48 4 10 4s10-1.79 10-4C22 14.51 20 13.22 17 12.53z"></path><path d="M17.83 16c-.67.42-2.69 1-5.83 1s-5.16-.58-5.83-1a6.79 6.79 0 012.12-.68 5.1 5.1 0 01-.63-.89C6 14.8 5 15.36 5 16c0 1.1 3.13 2 7 2s7-.9 7-2c0-.64-1-1.2-2.66-1.57a5.1 5.1 0 01-.63.89 6.79 6.79 0 012.12.68z"></path></g></svg></span>Pool
+                </a>
+            </div>
+            <br>
+            <div class="dessbut1">
+                <button class="dessbut" type="button">Check price</button>
+            </div>
+            <br>
+        </div>
+        
+        <div class="dess">
+            <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_40,w_400/partner-images/70/b8/9c93b7b3dd75156391cd877db98e1e4975cb97325061c16cb8c9c5366f73.jpeg" alt="">
+            <div class="desstext">
+                <h2>Hotel Botanico Oriental </h2>
+                <p>8.8 - Excellent (3851) Torremolinos</p>
+                <br>
+                <a href="#">
+                    <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M15 14a2 2 0 00-2 2 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 1 1 0 012 0 .5.5 0 001 0 2 2 0 00-2-2zM10.5 18.5a.5.5 0 00-.5.5 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 .5.5 0 00-.5-.5zM13.5 18.5a.5.5 0 01.5.5 1 1 0 002 0 2 2 0 014 0 .5.5 0 01-1 0 1 1 0 00-2 0 2 2 0 01-4 0 .5.5 0 01.5-.5zM16.5 2A1.5 1.5 0 0015 3.5V7H8V3.5a.5.5 0 011 0v1a.5.5 0 001 0v-1a1.5 1.5 0 00-3 0v9a.5.5 0 001 0V11h7v1.5a.5.5 0 001 0v-9a.5.5 0 011 0v1a.5.5 0 001 0v-1A1.5 1.5 0 0016.5 2zM8 10V8h7v2z"></path></g></svg></span>Direct beach access 
+                    <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M12 6.6c1.43 1.87 3 4.33 3 5.4a3 3 0 01-6 0c0-1.07 1.57-3.53 3-5.4M12 5s-4 4.79-4 7a4 4 0 008 0c0-2.21-4-7-4-7z"></path><path d="M17 12.53a5.23 5.23 0 01-.21 1C19.43 14.12 21 15.18 21 16c0 1.22-3.51 3-9 3s-9-1.78-9-3c0-.82 1.57-1.88 4.26-2.5a5.23 5.23 0 01-.21-1c-3 .69-5 2-5 3.47 0 2.21 4.48 4 10 4s10-1.79 10-4C22 14.51 20 13.22 17 12.53z"></path><path d="M17.83 16c-.67.42-2.69 1-5.83 1s-5.16-.58-5.83-1a6.79 6.79 0 012.12-.68 5.1 5.1 0 01-.63-.89C6 14.8 5 15.36 5 16c0 1.1 3.13 2 7 2s7-.9 7-2c0-.64-1-1.2-2.66-1.57a5.1 5.1 0 01-.63.89 6.79 6.79 0 012.12.68z"></path></g></svg></span>Pool
+                </a>
+            </div>
+            <br>
+            <div class="dessbut1">
+                <button class="dessbut" type="button">Check price</button>
+            </div>
+            <br>
+        </div>
+        
+        <div class="dess">
+            <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_40,w_400/hotelier-images/6e/6e/8ea7cb137f57db573eb691a6ba5d82b98e82d88b580898b37c34657bd2e7.jpeg" alt="">
+            <div class="desstext">
+                <h2>Gran Hotel Miramar GL</h2>
+                <p>8.8 - Excellent (3851) Torremolinos</p>
+                <br>
+                <a href="#">
+                    <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M15 14a2 2 0 00-2 2 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 1 1 0 012 0 .5.5 0 001 0 2 2 0 00-2-2zM10.5 18.5a.5.5 0 00-.5.5 1 1 0 01-2 0 2 2 0 00-4 0 .5.5 0 001 0 1 1 0 012 0 2 2 0 004 0 .5.5 0 00-.5-.5zM13.5 18.5a.5.5 0 01.5.5 1 1 0 002 0 2 2 0 014 0 .5.5 0 01-1 0 1 1 0 00-2 0 2 2 0 01-4 0 .5.5 0 01.5-.5zM16.5 2A1.5 1.5 0 0015 3.5V7H8V3.5a.5.5 0 011 0v1a.5.5 0 001 0v-1a1.5 1.5 0 00-3 0v9a.5.5 0 001 0V11h7v1.5a.5.5 0 001 0v-9a.5.5 0 011 0v1a.5.5 0 001 0v-1A1.5 1.5 0 0016.5 2zM8 10V8h7v2z"></path></g></svg></span>Direct beach access 
+                    <span class="Icon_wrapper__B6IoS Icon_m__qOPUh AmenitiesSection_icon__K6tTR" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="Icon_icon__1R9KC"><g fill="currentColor"><path d="M12 6.6c1.43 1.87 3 4.33 3 5.4a3 3 0 01-6 0c0-1.07 1.57-3.53 3-5.4M12 5s-4 4.79-4 7a4 4 0 008 0c0-2.21-4-7-4-7z"></path><path d="M17 12.53a5.23 5.23 0 01-.21 1C19.43 14.12 21 15.18 21 16c0 1.22-3.51 3-9 3s-9-1.78-9-3c0-.82 1.57-1.88 4.26-2.5a5.23 5.23 0 01-.21-1c-3 .69-5 2-5 3.47 0 2.21 4.48 4 10 4s10-1.79 10-4C22 14.51 20 13.22 17 12.53z"></path><path d="M17.83 16c-.67.42-2.69 1-5.83 1s-5.16-.58-5.83-1a6.79 6.79 0 012.12-.68 5.1 5.1 0 01-.63-.89C6 14.8 5 15.36 5 16c0 1.1 3.13 2 7 2s7-.9 7-2c0-.64-1-1.2-2.66-1.57a5.1 5.1 0 01-.63.89 6.79 6.79 0 012.12.68z"></path></g></svg></span>Pool
+                </a>
+            </div>
+            <br>
+            <div class="dessbut1">
+                <button class="dessbut" type="button">Check price</button>
+            </div>
+            <br>
+        </div>
+    </div>
+</section>
+
+<!--  /////////fifth section/////////////  -->
+  <div class="fifthsec1">
+    <h1>Popular searches</h1>
+    <br>
+    <div class="fifthbut">
+        <p style="text-decoration: underline;">Cities</p>
+        <p style="text-decoration: underline;">Destinations</p>
+    </div>
+<br><br>
+    <div class="fifthsecimg">
+        <div class="fifimg1">
+            <img class="fifimgg1" src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_258,q_auto,w_258/categoryimages/64/98/64981_v33.jpeg" alt="destination">
+        </div>
+        <div class="fifimg1">
+            <img class="fifimgg1" src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_258,q_auto,w_258/categoryimages/64/98/64981_v33.jpeg" alt="destination">
+        </div>
+        <div class="fifimg1">
+            <img class="fifimgg1" src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_258,q_auto,w_258/categoryimages/64/98/64981_v33.jpeg" alt="destination">
+        </div>
+        <div class="fifimg1">
+            <img class="fifimgg1" src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_258,q_auto,w_258/categoryimages/64/98/64981_v33.jpeg" alt="destination">
+        </div>
+        <br>
+    </div>
+    
+  </div>
+
+<footer>
+    <div>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aliquam excepturi recusandae aspernatur et impedit dicta obcaecati soluta mollitia. Perspiciatis, ducimus quis. Nostrum beatae cupiditate explicabo sed atque nisi quae.
+        Voluptatem perferendis eum odio esse animi similique non dolore ut aliquam, repudiandae quod vel modi est, excepturi fugit sed aut placeat dicta ducimus dolor velit culpa, labore laborum. Culpa, quibusdam.
+        Quisquam, architecto rem ducimus ex doloribus repellendus impedit molestias odio aliquam, velit totam. Beatae vitae consequuntur eos voluptas doloribus maxime obcaecati officiis perferendis, itaque, ad deleniti maiores perspiciatis amet illo!
+        Harum, cum! Repellendus nulla fuga voluptas ad. Qui consectetur ipsa, vero sint quam accusamus harum fugiat provident voluptatibus velit facilis sunt obcaecati blanditiis vitae laborum earum consequuntur minus tempora commodi?
+        Reprehenderit hic aliquam, ad beatae modi accusantium eius porro consectetur sapiente deserunt a blanditiis autem. Voluptates, earum incidunt id odio aut voluptatibus necessitatibus commodi veniam quae placeat aliquam sed fugiat?
+        Expedita ut impedit, perferendis adipisci qui omnis doloribus commodi harum aut reprehenderit pariatur ipsum totam laudantium provident. Quis doloribus, et enim repellendus ipsum, officia eum laboriosam, aperiam autem exercitationem facere.
+        Temporibus incidunt aliquam reprehenderit animi assumenda, cum atque itaque architecto quis odio. Rem voluptatum quos alias, maiores, sit amet repellat perspiciatis natus ab aperiam earum nesciunt eos tempora voluptas eveniet.
+        Dignissimos totam sit natus, assumenda ipsum ea nostrum nemo amet dolorem consectetur esse quisquam facere in eius aliquid delectus distinctio asperiores voluptate omnis eveniet dolor itaque neque voluptatum quae? Totam.
+        Numquam dicta sequi nihil eos vel ab optio sed fugit nulla nam, veritatis, rem quasi facere labore. In placeat atque quod nam, libero ullam! Molestiae debitis distinctio enim quidem dicta!
+        Ut repudiandae labore, est iusto veniam iste porro accusantium adipisci, non tempore incidunt odio dolores quae, magnam eveniet architecto facilis dolorum cumque corporis quod autem! Amet aperiam temporibus nulla laudantium!
+        Laborum fugiat explicabo animi ipsa neque at, dolore corporis iste! Corporis rerum delectus atque iste, quaerat accusantium, dolores consequuntur aspernatur saepe odio earum repellat voluptatibus voluptatum, quae nisi illo quis?
+        Laboriosam amet totam voluptatibus nesciunt commodi voluptatum recusandae aspernatur quas, sed, ratione voluptas nemo cumque eius doloremque iusto similique! Ipsa ab corporis ducimus libero eos minima distinctio quidem. A, quasi!
+        Sed modi harum quidem odit, doloremque rem illo atque? Quae, porro optio. Modi maiores reprehenderit, laborum repudiandae voluptates officiis quis est doloribus cumque facere nam sit dolore expedita earum quisquam?
+        Odio minus vitae sunt quae, amet, voluptates architecto iusto a officiis eaque, itaque aspernatur dicta aliquam autem reiciendis. Ex delectus impedit doloribus eius officiis accusantium provident esse debitis ab itaque?
+        Nulla architecto, ab ex dignissimos veritatis odit exercitationem cumque hic, soluta id ea temporibus, eveniet rem quo quidem nihil magnam minus aut modi? Cupiditate, culpa! Ea autem sit rem quos!
+        Sint, perferendis repellat! Deserunt corrupti nulla, quibusdam impedit illo excepturi dolorum ullam eius pariatur quod quis consequatur praesentium. Perspiciatis labore alias, voluptas amet culpa esse illo illum repellat in officia?
+        Maxime suscipit perferendis atque unde voluptatem inventore tempora accusantium quod dolore quo, in soluta iusto accusamus ratione laboriosam illo velit quos architecto voluptatibus sapiente obcaecati ipsa. Ipsam accusamus molestias mollitia.
+        Officia explicabo, aspernatur, quaerat temporibus mollitia rem itaque fugit tempore magnam impedit nam minima optio totam reprehenderit recusandae iste sunt perferendis, nobis aliquid ipsam ducimus! Itaque quod corrupti molestiae facere!
+        Minus totam provident officiis qui hic nemo quia in numquam molestias id ducimus rerum, et fugiat sed delectus obcaecati a cumque vitae maxime laudantium aspernatur error. Unde ab voluptatum quod.
+        Quibusdam quis, consectetur recusandae modi aperiam harum. Tempora placeat sunt quos recusandae vero excepturi adipisci, debitis alias officiis nam beatae. Saepe et officia officiis reiciendis delectus voluptatum minima perspiciatis! Dolor.
+        Ullam expedita sequi saepe cupiditate repellat laudantium quis non sit, sapiente similique, iste a sunt? Doloribus, eaque iure saepe explicabo, ipsam est rem reiciendis repellendus, tempore incidunt quam voluptatum consequatur.
+        Tempora veniam dicta, quas cum vel consequatur iure hic quae. Reprehenderit consectetur mollitia eaque! Voluptates cupiditate eligendi dolores rerum, quod provident odit nulla, saepe repellat architecto, doloremque asperiores ratione et.
+        Adipisci, minima ab dignissimos iusto laborum voluptatem quam quae voluptas similique. Voluptatum molestiae animi, distinctio sed labore asperiores ratione beatae nostrum. Laborum, fugiat? Iste doloremque accusamus voluptates dolor harum reiciendis!
+        Ducimus reiciendis modi harum qui nam similique mollitia necessitatibus temporibus doloremque et odit maxime ab sint excepturi asperiores odio facere obcaecati, cum molestiae facilis sequi soluta quos. Minima, doloremque explicabo?
+        Aliquid totam vero beatae numquam quod accusamus iure facilis amet asperiores harum deleniti repellendus, labore maxime, eos corrupti sequi! Nesciunt facilis laudantium inventore repellat mollitia quas minus porro cupiditate alias.
+        Unde blanditiis assumenda itaque deleniti! Fugiat laboriosam ratione consequuntur asperiores, doloremque aperiam molestiae enim perspiciatis tempora officia est ut atque accusamus error. Reprehenderit unde maiores sed officia nostrum, dignissimos voluptas?
+        Obcaecati voluptatem mollitia eum quisquam dolores reiciendis magnam perferendis? Molestias natus obcaecati totam architecto! Ipsum optio ex voluptas provident nostrum non cumque est, rerum fuga facere laboriosam. Quisquam, ratione quos?
+        Esse dolorem itaque, architecto temporibus quia culpa. Impedit quas expedita in ipsum ipsa pariatur minima veritatis accusamus iure consequuntur. Aperiam, incidunt quas mollitia sit provident omnis eligendi corporis consectetur quia?
+        Nobis vitae quasi temporibus quis praesentium consequuntur ut doloremque, beatae asperiores iste aliquam harum similique fugiat, eius recusandae a saepe molestiae quas culpa consectetur! Ex omnis perspiciatis facilis modi soluta.
+        Nam ad maxime placeat nostrum culpa odio quod, voluptatibus ducimus iusto quaerat? Neque velit, sed cupiditate est nostrum accusamus atque laboriosam ad non recusandae pariatur dolore beatae perspiciatis earum facilis?</h1>
+    </div>
+</footer>
+</body>
+
+</html>
